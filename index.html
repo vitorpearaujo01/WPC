@@ -349,7 +349,7 @@
 
 
     .section-head h2 {
-      font-size: clamp(3rem, 5vw, 4rem);
+      font-size: clamp(2.7rem, 5vw, 4rem);
       font-weight: 600;
       letter-spacing: -0.005em;
       font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -525,8 +525,7 @@
       /* Faz a foto preencher a caixa sem distorcer (cortando as bordas se necessário) */
       cursor: default;
       display: block;
-      border-radius: 18px;
-      box-shadow: 2px 4px 12px #00000028;
+      border-radius: 21px;
 
     }
 
@@ -567,11 +566,13 @@
       cursor: default;
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      padding: 5px 30px;
       gap: 70px;
     }
 
     .fotos-item {
-      background: linear-gradient(180deg, var(--branco) 0%, var(--branco-dim) 100%);
+      border: 4px solid #ffffff;
+      background: linear-gradient(130deg, var(--branco) 60%, var(--branco-dim) 100%);
       width: 280px;
       border-radius: 30px;
       display: flex;
@@ -593,7 +594,6 @@
     .fotos-item img {
       border-radius: 21px;
       overflow: hidden;
-      box-shadow: 2px 4px 12px #00000014;
     }
 
     .texto-imagem {
@@ -695,7 +695,8 @@
     }
 
     .ticket-ctas .btn-primary {
-      background: linear-gradient(150deg, var(--laranja-1) 30%, var(--azul-3) 100%);
+      color: var(--branco);
+      background: linear-gradient(180deg, var(--laranja-1) 0%, var(--azul-3) 100%);
       padding: 16px 20px;
       border-radius: 60px;
       box-shadow: 1px 4px 3px rgba(233, 236, 239),
@@ -926,7 +927,7 @@
         <div class="ticket-row"><span>SERVICE AREA</span><span>Boston &amp; Greater Boston</span></div>
         <div class="ticket-row"><span>TRADES</span><span>Paint · Carp · General Repairs +</span></div>
         <div class="ticket-ctas">
-          <a class="btn btn-primary" href="tel:+19787630490">Call (978) 763-049</a>
+          <a class="btn btn-primary" href="tel:+19787630490">Call (978) 763-0490</a>
           <a class="btn btn-wa"
             href="sms:+19787630490?&body=Hi%20Wilton%2C%20I%27d%20like%20a%20quote%20for%20a%20project.">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
