@@ -597,10 +597,8 @@
       /* Definimos uma altura fixa para o card */
       border-radius: 24px;
       overflow: hidden;
-      /* Corta as pontas da imagem para arredondar */
       background: #f5f5f7;
-      /* Cor de fundo clarinha */
-      box-shadow: 7px 2px 15px #00000060;
+      box-shadow: 7px 2px 20px #00000020;
       transition: all 0.3s ease;
 
       /* Limpamos os paddings e bordas antigas para a imagem colar nas bordas */
@@ -627,30 +625,29 @@
     /* 4. O Texto no Topo */
     .texto-imagem {
       position: absolute;
-      top: 0;
+      bottom: 0;
       left: 0;
       width: 100%;
       z-index: 3;
       /* Fica acima da imagem e do degradê */
       padding: 24px;
-      /* Espaço das bordas */
       color: var(--grafite);
       font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: -.022em;
-      line-height: 1.1;
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: .007em;
+      line-height: 1.1428571429;
       text-align: left;
       /* Alinha o texto à esquerda como na Apple */
     }
 
     .texto-imagem p {
       color: var(--azul-3);
-      /* Cinza médio elegante */
       font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
       font-size: 16px;
-      font-weight: 500;
-      letter-spacing: -.022em;
+      font-weight: 400;
+      letter-spacing: 0.016em;
+      line-height: 1.2857742857;
       margin: 8px 0 0 0;
       /* Dá um respiro entre o título e a localização */
     }
