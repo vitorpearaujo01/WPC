@@ -121,7 +121,7 @@
       font-size: 1rem;
       cursor: pointer;
       border: 2.5px solid var(--grafite);
-      transition: all 0.5s ease-in-out;
+      transition: all 0.2s ease-in-out;
 
     }
 
@@ -136,7 +136,9 @@
     }
 
     .btn-wa:hover {
-      background: #d2dce6;
+      background: linear-gradient(180deg, var(--cinza-claro) 0%, var(--branco-dim) 100%);
+      box-shadow: 1px 4px 3px rgba(233, 236, 239),
+        inset 2px 2px 6px #00000080;
     }
 
     .reveal {
@@ -587,7 +589,7 @@
       height: 450px;
       border-radius: 24px;
       overflow: hidden;
-      box-shadow: 7px 2px 20px #00000020;
+      box-shadow: 7px 2px 30px #00000010;
       transition: all 0.3s ease;
       display: flex;
       flex-direction: column;
@@ -608,7 +610,9 @@
     .texto-imagem {
       width: 100%;
       padding: 20px 20px;
-      color: var(--grafite);
+      color: transparent;
+      background: linear-gradient(90deg, var(--grafite) 0%, #585858 100%);
+      background-clip: text;
       font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
       font-size: 20px;
       font-weight: 500;
@@ -618,6 +622,7 @@
 
     .texto-imagem p {
       color: var(--azul-3);
+      margin-top: 6px;
       font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
       font-size: 18px;
       font-weight: 300;
@@ -658,11 +663,11 @@
 
     .ticket-head {
       display: flex;
-      justify-content: center;
-      align-items: baseline;
+      justify-content: space-around;
+      align-items: center;
       border-bottom: 2px solid var(--grafite);
-      margin-bottom: 10px;
     }
+
 
     .ticket-head h3 {
       font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -712,7 +717,10 @@
     }
 
     .ticket-ctas .btn-primary:hover {
-      background: linear-gradient(150deg, var(--azul-3) 30%, var(--laranja-1) 100%);
+      background: linear-gradient(180deg, var(--azul-3) 0%, var(--laranja-1) 100%);
+      box-shadow: 1px 4px 3px rgba(233, 236, 239),
+        inset 2px 2px 4px #00000080;
+
     }
 
 
@@ -901,22 +909,22 @@
     <div class="fotos">
       <div class="fotos-item">
         <img src="image/work-pintura.png" alt="">
-        <div class="texto-imagem">Residential Painting <p>Dowtown Boston</p>
+        <div class="texto-imagem">Residential Painting <p><i class="fi fi-sr-marker"></i> Dowtown Boston</p>
         </div>
       </div>
       <div class="fotos-item">
         <img src="image/work-2.png" alt="">
-        <div class="texto-imagem">Staircase Renovation <p>Peabody</p>
+        <div class="texto-imagem">Staircase Renovation <p><i class="fi fi-sr-marker"></i> Peabody</p>
         </div>
       </div>
       <div class="fotos-item">
         <img src="image/work-3.png" alt="">
-        <div class="texto-imagem">Window Installation <p>North Quincy</p>
+        <div class="texto-imagem">Window Installation <p><i class="fi fi-sr-marker"></i> North Quincy</p>
         </div>
       </div>
       <div class="fotos-item">
         <img src="image/work-3.png" alt="">
-        <div class="texto-imagem">Floor Replacement <p>Cambridge</p>
+        <div class="texto-imagem">Floor Replacement <p><i class="fi fi-sr-marker"></i> Cambridge</p>
         </div>
       </div>
     </div>
