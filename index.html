@@ -332,14 +332,11 @@
       color: var(--branco);
     }
 
+    .hero-inner img {
+      max-width: 100%;
+      height: auto;
 
-    .hero-sub {
-      display: block;
-      font-size: 1.12rem;
-      max-width: 520px;
-      margin-top: 22px;
-      color: rgba(251, 249, 245, .85);
-      line-height: 1.6;
+
     }
 
 
@@ -433,32 +430,8 @@
     @media (max-width: 480px) {
       .services-grid {
         display: flex;
-        flex-wrap: nowrap;
-        gap: 20px;
-
-        width: 100vw;
-        max-width: none;
-        margin-left: calc(50% - 50vw);
-
-        padding: 5px 0 15px;
-        overflow-x: auto;
-
-        scroll-snap-type: x mandatory;
-        scroll-padding-left: 16px;
-        scrollbar-width: none;
-      }
-
-      .service-card {
-        flex: 0 0 240px;
-        scroll-snap-align: start;
-      }
-
-      .service-card:first-child {
-        margin-left: 16px;
-      }
-
-      .service-card:last-child {
-        margin-right: 16px;
+        flex-direction: column;
+        align-items: center;
       }
     }
 
@@ -559,19 +532,13 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      /* Faz a foto preencher a caixa sem distorcer (cortando as bordas se necessário) */
       cursor: default;
       display: block;
       border-radius: 21px;
 
     }
 
-    @media(max-width:480px) {
-      .monogram {
-        width: 320px;
-        height: 360px;
-      }
-    }
+
 
     .about-text p {
       line-height: 1.7;
@@ -809,8 +776,7 @@
   <section class="hero" id="top">
     <div class="container hero-inner">
       <h1>Construction &amp; repairs, <em>done right,</em> start to finish.</h1>
-      <span class="hero-sub">Wilton Pereira handles painting, carpentry, decks, electrical, plumbing, and general
-        repairs, one contractor for the whole job, not five different numbers to call.</span>
+      <img height="724" width="2172" src="image/van.png" alt="Van de trabalho">
     </div>
   </section>
 
