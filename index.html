@@ -286,7 +286,7 @@
       }
     }
 
-    @media (max-width: 400px) {
+    @media (max-width: 480px) {
       .nav-links {
         gap: 15px;
       }
@@ -306,7 +306,14 @@
 
     .hero-inner {
       position: relative;
-      max-width: 840px;
+      display: flex;
+      max-width: 1000px;
+    }
+
+    .hero-inner img {
+      width: 230px;
+      height: auto;
+      object-fit: cover;
     }
 
     .hero h1 {
@@ -333,12 +340,22 @@
       color: var(--branco);
     }
 
-    .hero-inner img {
-      max-width: 100%;
+    @media (max-width: 580px) {
+      .hero-inner {
+        max-width: 100%;
+        flex-direction: column;
+      }
 
+      .hero-inner img {
+        width: 100%;
+        height: 130px;
+        object-fit: cover;
+      }
 
+      .hero h1 {
+        font-size: clamp(2.5rem, 6vw, 3.5rem);
+      }
     }
-
 
 
     /* sections */
@@ -952,6 +969,7 @@
 
   <section class="hero" id="top">
     <div class="container hero-inner">
+      <img src="/image/ChatGPT Image Aug 1, 2026, 10_52_47 AM.png" alt="WP Construction">
       <h1>Construction &amp; repairs, <em>done right,</em> start to finish.</h1>
     </div>
   </section>
