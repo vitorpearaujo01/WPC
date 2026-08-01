@@ -17,6 +17,7 @@
     href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons@3.3.1/css/all/all.min.css">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
 
 
   <style>
@@ -377,61 +378,137 @@
       margin-bottom: 30px;
     }
 
-    /* services */
+    /* =========================
+   SERVICES
+========================= */
+
     .services {
-      background: radial-gradient(circle at 20% 0%, var(--branco) 0%, transparent 75%),
-        linear-gradient(180deg, var(--branco) 0%, var(--branco-dim) 55%);
+      --services-accent: #ff5a00;
+      --services-text: #202124;
+      --services-line: #e5e5e5;
+
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 20% 0%, #ffffff 0%, transparent 75%),
+        linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%);
+      padding-top: 100px;
     }
 
-    .services-grid {
-      background: none;
-      max-width: 1000px;
+    .services-container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      padding-bottom: 120px;
     }
 
 
-    .service-card {
-      max-width: 300px;
-      border: none;
-      background: white;
-      border-radius: 25px;
-      width: 100%;
-      cursor: default;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 5px 10px;
-      transition: all 0.5s ease;
+    /* Cabeçalho */
+
+    .services .section-head {
+      margin-bottom: 80px;
     }
 
-    .service-card:hover {
-      transform: scale(1.03);
-    }
-
-
-    .service-card h3 {
-      color: var(--cinza-escuro);
+    .services-intro {
+      font-family:
+        "SF Pro Display",
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
       font-size: 20px;
       font-weight: 300;
-      letter-spacing: .007em;
-      font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+      line-height: 1.2;
     }
 
-    .service-card h3 i {
-      margin-left: 20px;
-      color: var(--azul-3);
+
+    /* Categorias */
+
+    .service-category {
+      margin-bottom: 70px;
+    }
+
+    .service-category:last-child {
+      margin-bottom: 0;
+    }
+
+    .category-title {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .category-title>i {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--services-accent);
+      font-size: 28px;
+    }
+
+    .category-title h3 {
+      margin: 0;
+      color: var(--services-text);
+      font-family:
+        "SF Pro Display",
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+      font-size: 25px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+
+    /* Lista de serviços */
+
+    .services-list {
+      margin-left: 54px;
+    }
+
+    .service-item {
+      display: grid;
+      grid-template-columns: 30px 1fr;
+      align-items: center;
+      gap: 16px;
+      min-height: 58px;
+      color: var(--services-text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--services-line);
+      transition:
+        color 0.25s ease,
+        padding-left 0.25s ease;
+    }
+
+    .service-item:last-child {
+      border-bottom: none;
+    }
+
+    .service-item>i {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--services-accent);
+      font-size: 22px;
+    }
+
+    .service-item span {
+      font-family:
+        "SF Pro Display",
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
       font-size: 20px;
+      font-weight: 300;
+      line-height: 1.2;
     }
 
-    @media (max-width: 480px) {
-      .services-grid {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
+    .service-item:hover {
+      color: var(--services-accent);
+      padding-left: 6px;
     }
 
     /* why */
@@ -883,56 +960,154 @@
 
   <section class="services" id="services">
     <div class="container">
+      <!-- Cabeçalho -->
       <div class="section-head reveal">
         <span class="eyebrow eyebrow--on-light">The Work</span>
-        <h2>Many trades. One contractor.</h2>
+
+        <h2>
+          Many trades.<br>
+          One contractor.
+        </h2>
+
+        <span class="section-line"></span>
+
+        <p class="services-intro">
+          From repairs to full remodels,<br>
+          we handle it all.
+        </p>
       </div>
-      <div class="services-grid reveal">
-        <a href="#contact" class="service-card">
-          <h3>General Repairs<i class="fi fi-br-tools"></i></h3>
-        </a>
-        <a href="#contact" class="service-card">
-          <h3>Painting<i class="fi fi-br-paint-roller"></i></h3>
-        </a>
-        <a href="#contact" class="service-card">
-          <h3>Drywall<i class="fi fi-br-hammer"></i></h3>
-        </a>
-        <a href="#contact" class="service-card">
-          <h3>Flooring<i class="fi fi-br-ruler-triangle"></i></h3>
-        </a>
-        <a href="#contact" class="service-card">
-          <h3>Carpentry<i class="fi fi-br-screw-alt"></i></h3>
-        </a>
-        <a href="#contact" class="service-card">
-          <h3>Roof Repairs<i class="fi fi-br-house-chimney"></i></h3>
-        </a>
-        <a href="#contact" class="service-card">
-          <h3>Fencing<i class="fi fi-br-fence"></i></h3>
-        </a>
-        <a href="#contact" class="service-card">
-          <h3>Decks<i class="fi fi-br-stairs"></i></h3>
-        </a>
-        <a href="#contact" class="service-card">
-          <h3>Small Remodels<i class="fi fi-br-screwdriver"></i></h3>
-        </a>
-        <a href="#contact" class="service-card">
-          <h3>Door Installation<i class="fi fi-br-door-open"></i></h3>
-        </a>
-        <a href="#contact" class="service-card">
-          <h3>Window Installation<i class="fi fi-br-window-frame"></i></h3>
-        </a>
-        <a href="#contact" class="service-card">
-          <h3>Finishing Work<i class="fi fi-br-paint-brush"></i></h3>
-        </a>
-        <a href="#contact" class="service-card">
-          <h3>Plastering<i class="fi fi-br-brush"></i></h3>
-        </a>
-        <a href="#contact" class="service-card">
-          <h3>Furniture Assembly<i class="fi fi-br-couch"></i></h3>
-        </a>
-        <a href="#contact" class="service-card">
-          <h3>Home Maintenance<i class="fi fi-br-home"></i></h3>
-        </a>
+      <div class="container services-container">
+
+        <!-- Repairs -->
+        <div class="service-category reveal">
+
+          <div class="category-title">
+            <i class="fi fi-br-tools"></i>
+            <h3>Repairs</h3>
+          </div>
+
+          <div class="services-list">
+
+            <a href="#contact" class="service-item">
+              <i class="fi fi-br-screwdriver"></i>
+              <span>General Repairs</span>
+            </a>
+
+            <a href="#contact" class="service-item">
+              <i class="fi fi-br-background"></i>
+              <span>Drywall</span>
+            </a>
+
+            <a href="#contact" class="service-item">
+              <i class="fi fi-br-house-chimney"></i>
+              <span>Roof Repairs</span>
+            </a>
+
+            <a href="#contact" class="service-item">
+              <i class="fi fi-br-door-open"></i>
+              <span>Door Installation</span>
+            </a>
+
+            <a href="#contact" class="service-item">
+              <i class="fi fi-br-window-frame"></i>
+              <span>Window Installation</span>
+            </a>
+
+          </div>
+        </div>
+
+
+        <!-- Interior Work -->
+        <div class="service-category reveal">
+
+          <div class="category-title">
+            <i class="fi fi-sr-paint-roller"></i>
+            <h3>Interior Work</h3>
+          </div>
+
+          <div class="services-list">
+
+            <a href="#contact" class="service-item">
+              <i class="fi fi-br-paint-roller"></i>
+              <span>Painting</span>
+            </a>
+
+            <a href="#contact" class="service-item">
+              <i class="fi fi-br-ruler-triangle"></i>
+              <span>Flooring</span>
+            </a>
+
+            <a href="#contact" class="service-item">
+              <i class="fi fi-br-scraper"></i>
+              <span>Plastering</span>
+            </a>
+
+            <a href="#contact" class="service-item">
+              <i class="fi fi-br-paint-brush"></i>
+              <span>Finishing Work</span>
+            </a>
+
+          </div>
+        </div>
+
+
+        <!-- Exterior Work -->
+        <div class="service-category reveal">
+
+          <div class="category-title">
+            <i class="fi fi-sr-fence"></i>
+            <h3>Exterior Work</h3>
+          </div>
+
+          <div class="services-list">
+
+            <a href="#contact" class="service-item">
+              <i class="fi fi-br-stairs"></i>
+              <span>Decks</span>
+            </a>
+
+            <a href="#contact" class="service-item">
+              <i class="fi fi-br-fence"></i>
+              <span>Fencing</span>
+            </a>
+
+          </div>
+        </div>
+
+
+        <!-- Carpentry and Maintenance -->
+        <div class="service-category reveal">
+
+          <div class="category-title">
+            <i class="fi fi-sr-hammer-crash"></i>
+            <h3>Carpentry &amp; Maintenance</h3>
+          </div>
+
+          <div class="services-list">
+
+            <a href="#contact" class="service-item">
+              <i class="fi fi-br-screw-alt"></i>
+              <span>Carpentry</span>
+            </a>
+
+            <a href="#contact" class="service-item">
+              <i class="fi fi-br-screwdriver"></i>
+              <span>Small Remodels</span>
+            </a>
+
+            <a href="#contact" class="service-item">
+              <i class="fi fi-br-couch"></i>
+              <span>Furniture Assembly</span>
+            </a>
+
+            <a href="#contact" class="service-item">
+              <i class="fi fi-br-home"></i>
+              <span>Home Maintenance</span>
+            </a>
+
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
