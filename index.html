@@ -399,6 +399,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       padding-bottom: 120px;
+      margin-left: 0;
     }
 
 
@@ -522,6 +523,7 @@
       gap: 1px;
       background: none;
       cursor: default;
+      gap: 25px;
     }
 
     @media(max-width:760px) {
@@ -531,22 +533,25 @@
     }
 
     .why-item {
-      background: none;
+      background: #ffffff21;
       padding: 30px;
       display: flex;
+      border-radius: 20px;
       gap: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1),
+        inset 0 0 90px #ffffff;
     }
 
     .why-item i {
       font-size: 30px;
       flex-shrink: 10px;
-      color: var(--branco);
+      color: #ffffff;
       margin-top: 30px;
     }
 
 
     .why-item h3 {
-      color: var(--branco);
+      color: #ffffff;
       font-size: 28px;
       font-weight: bold;
       letter-spacing: .007em;
@@ -559,7 +564,7 @@
     }
 
     .why-item p {
-      color: var(--branco);
+      color: #ffffff;
       margin-top: 16px;
       font-size: 20px;
       font-weight: 400;
@@ -1183,7 +1188,7 @@
         <span class="eyebrow eyebrow--on-light">Recent Work</span>
         <h2>See it in progress.</h2>
       </div>
-    </div> <!-- ⚠️ ATENÇÃO: O container agora fecha AQUI! -->
+    </div>
 
     <!-- Os cards agora estão fora do container e podem encostar na borda -->
     <div class="fotos">
