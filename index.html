@@ -346,7 +346,7 @@
         display: block;
         width: 100%;
         height: 130px;
-        object-fit: cover;
+        object-fit: contain;
       }
 
     }
@@ -925,7 +925,8 @@
 
     .footer-inner {
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
       gap: 12px;
     }
 
@@ -933,7 +934,7 @@
       .footer-inner {
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
       }
     }
 
@@ -964,7 +965,7 @@
 
   <section class="hero" id="top">
     <div class="container hero-inner">
-      <img src="image/wp.png" alt="WP Construction">
+      <img src="image/wp1.png" alt="WP Construction">
       <h1>Construction &amp; repairs, <em>done right,</em> start to finish.</h1>
     </div>
   </section>
@@ -1258,8 +1259,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
-        <strong>WP CONSTRUCTION</strong>
-        Boston, MA &amp; Greater Boston Metro
+        <img src="image/wp1.png" width="200" height="90" alt="WP Construction">
       </div>
       <div>
         (978) 763-0490 · © 2026 WP Construction. All rights reserved.
