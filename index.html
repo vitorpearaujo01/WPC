@@ -410,7 +410,8 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       padding-bottom: 120px;
-      margin-left: 0;
+      margin: 0 auto; 
+      gap:30px;
     }
 
 
@@ -524,7 +525,7 @@
 
     /* why */
     .why {
-      background: linear-gradient(180deg, var(--laranja-1) 0%, var(--azul-3) 55%);
+      background: linear-gradient(140deg, #ffab67 0%, var(--laranja-1) 55%);
     }
 
     .why-grid {
@@ -678,7 +679,8 @@
       height: 450px;
       border-radius: 16px;
       overflow: hidden;
-      box-shadow: 7px 2px 30px #00000010;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
       transition: all 0.3s ease;
       display: flex;
       flex-direction: column;
@@ -745,8 +747,6 @@
       padding-top: 55px;
       padding-bottom: 55px;
 
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     }
 
 
@@ -1027,29 +1027,6 @@
 
           </div>
         </div>
-        <!-- Repairs & Maintenance -->
-        <div class="service-category reveal">
-
-          <div class="category-title">
-            <i class="fi fi-br-tools"></i>
-            <h3>Repairs &amp; Maintenance</h3>
-          </div>
-
-          <div class="services-list">
-
-            <a href="#contact" class="service-item">
-              <i class="fi fi-br-screwdriver"></i>
-              <span>General Repairs</span>
-            </a>
-
-            <a href="#contact" class="service-item">
-              <i class="fi fi-br-home"></i>
-              <span>Home Maintenance</span>
-            </a>
-
-          </div>
-        </div>
-
 
 
 
@@ -1077,6 +1054,16 @@
             <a href="#contact" class="service-item">
               <i class="fi fi-br-couch"></i>
               <span>Furniture Assembly</span>
+            </a>
+
+            <a href="#contact" class="service-item">
+              <i class="fi fi-br-screwdriver"></i>
+              <span>General Repairs</span>
+            </a>
+
+            <a href="#contact" class="service-item">
+              <i class="fi fi-br-home"></i>
+              <span>Home Maintenance</span>
             </a>
 
           </div>
